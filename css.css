@@ -1,0 +1,42 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.content{
+	width: 800px;
+	height: 800px;
+	margin:0 auto;
+	margin-top: 100px;
+}
+.content ul{list-style: none;}
+.content ul li{
+	position: absolute;
+	transform-style:preserve-3d;
+	
+}
+.content ul li:nth-of-type(1){
+    animation:move1 5s linear 0s infinite;
+    transition:all 1s ;
+}
+.content ul li:nth-of-type(3){
+	animation:move1 10s linear 0s infinite;
+}
+.content ul li:nth-of-type(2){
+    animation:move2 20s linear 0s infinite;
+}
+@keyframes move1{
+	from{
+		transform: rotateZ(0deg);
+	}
+	to{
+       transform: rotateZ(360deg);
+	}
+}
+@keyframes move2{
+	from{
+		transform: rotateZ(0deg);
+	}
+	to{
+       transform: rotateZ(-360deg);
+	}
+}
